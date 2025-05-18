@@ -1,0 +1,373 @@
+{
+    "product_families": {
+        "tableMaster": {
+            "table": "ref_product_families",
+            "label": "Product Families"
+        },
+        "fields": {
+            "name": {
+                "security-key": "k4l8FdSQuxbc",
+                "label": "Name",
+                "form": {
+                    "type": "text",
+                    "source_type": "value"
+                }
+            }
+        },
+        "form-buttons": {
+            "security-key": "btnProdFam",
+            "label": "Save Product Family",
+            "form-submit": {
+                "type": "submit"
+            }
+        }
+    },
+    "models": {
+        "tableMaster": {
+            "table": "ref_models",
+            "label": "Models"
+        },
+        "fields": {
+            "name": {
+                "security-key": "_EVs7w960Wzl",
+                "label": "Model Name",
+                "form": {
+                    "type": "text",
+                    "source_type": "value"
+                }
+            },
+            "family": {
+                "security-key": "PAN7SCuBo91o",
+                "label": "Family",
+                "form": {
+                    "type": "select",
+                    "source_type": "sgbd",
+                    "source": "ref_product_families",
+                    "field-view": "name",
+                    "field-record": "id"
+                }
+            }
+        },
+        "form-buttons": {
+            "security-key": "btnModels",
+            "label": "Save Model",
+            "form-submit": {
+                "type": "submit"
+            }
+        }
+    },
+    "sites": {
+        "tableMaster": {
+            "table": "ref_sites",
+            "label": "Sites"
+        },
+        "fields": {
+            "name": {
+                "security-key": "cZdgsN1SgInZ",
+                "label": "Site Name",
+                "form": {
+                    "type": "text",
+                    "source_type": "value"
+                }
+            },
+            "code": {
+                "security-key": "_g5Yv_lVYS5v",
+                "label": "Site Code",
+                "form": {
+                    "type": "text",
+                    "source_type": "value"
+                }
+            }
+        },
+        "form-buttons": {
+            "security-key": "btnSites",
+            "label": "Save Site",
+            "form-submit": {
+                "type": "submit"
+            }
+        }
+    },
+    "severities": {
+        "tableMaster": {
+            "table": "ref_severities",
+            "label": "Severities"
+        },
+        "fields": {
+            "number": {
+                "security-key": "sfcqB2y-rcki",
+                "label": "Severity Number",
+                "form": {
+                    "type": "number"
+                }
+            },
+            "security": {
+                "security-key": "mdHieQrLMdCs",
+                "label": "Security",
+                "form": {
+                    "type": "text"
+                }
+            }
+        },
+        "form-buttons": {
+            "security-key": "btnSeverities",
+            "label": "Save Severity",
+            "form-submit": {
+                "type": "submit"
+            }
+        }
+    },
+    "occurences": {
+        "tableMaster": {
+            "table": "ref_occurences",
+            "label": "Occurences"
+        },
+        "fields": {
+            "code": {
+                "security-key": "sV0vSobVhzIQ",
+                "label": "Occurence Code",
+                "form": {
+                    "type": "text",
+                    "source_type": "value"
+                }
+            },
+            "description": {
+                "security-key": "07PjN6uQodyE",
+                "label": "Description",
+                "form": {
+                    "type": "textarea",
+                    "source_type": "value"
+                }
+            }
+        },
+        "form-buttons": {
+            "security-key": "btnOccurences",
+            "label": "Save Occurence",
+            "form-submit": {
+                "type": "submit"
+            }
+        }
+    },
+    "business": {
+        "tableMaster": {
+            "table": "ref_business",
+            "label": "Business"
+        },
+        "fields": {
+            "business": {
+                "security-key": "afgkOAlJ_V8A",
+                "label": "Business",
+                "form": {
+                    "type": "text",
+                    "source_type": "value"
+                }
+            }
+        },
+        "form-buttons": {
+            "security-key": "btnBusiness",
+            "label": "Save Business",
+            "form-submit": {
+                "type": "submit"
+            }
+        }
+    },
+    "after_sales": {
+        "tableMaster": {
+            "table": "ref_after_sales",
+            "label": "After Sales"
+        },
+        "fields": {
+            "satc": {
+                "security-key": "vxxrN3L9SwDN",
+                "label": "After Sales Code",
+                "form": {
+                    "type": "text",
+                    "source_type": "value"
+                }
+            }
+        },
+        "form-buttons": {
+            "security-key": "btnAfterSales",
+            "label": "Save After Sales",
+            "form-submit": {
+                "type": "submit"
+            }
+        }
+    },
+    "contexts": {
+        "tableMaster": {
+            "table": "ref_contexts",
+            "label": "Contexts"
+        },
+        "fields": {
+            "context": {
+                "security-key": "G1SIES5geMK-",
+                "label": "Context",
+                "form": {
+                    "type": "text",
+                    "source_type": "value"
+                }
+            }
+        },
+        "form-buttons": {
+            "security-key": "btnContexts",
+            "label": "Save Context",
+            "form-submit": {
+                "type": "submit"
+            }
+        }
+    },
+    "priorities_m1": {
+        "tableMaster": {
+            "table": "ref_priorities_m1",
+            "label": "Priorities M1"
+        },
+        "fields": {
+            "priority_m1": {
+                "security-key": "8O4c6Opik1Rn",
+                "label": "Priority M1",
+                "form": {
+                    "type": "text",
+                    "source_type": "value"
+                }
+            },
+            "severite": {
+                "security-key": "g5_4-3GCffw7",
+                "label": "Severite",
+                "form": {
+                    "type": "select",
+                    "source_type": "sgbd",
+                    "source": "ref_severities",
+                    "field-view": "number",
+                    "field-record": "id"
+                }
+            }
+        },
+        "form-buttons": {
+            "security-key": "btnPrioritiesM1",
+            "label": "Save Priority M1",
+            "form-submit": {
+                "type": "submit"
+            }
+        }
+    },
+    "priorities_m2": {
+        "tableMaster": {
+            "table": "ref_priorities_m2",
+            "label": "Priorities M2"
+        },
+        "fields": {
+            "priority_m2": {
+                "security-key": "LEPHg0kKs4Sk",
+                "label": "Priority M2",
+                "form": {
+                    "type": "text",
+                    "source_type": "value"
+                }
+            },
+            "occurence": {
+                "security-key": "KD80JP3rERdP",
+                "label": "Occurence",
+                "form": {
+                    "type": "select",
+                    "source_type": "sgbd",
+                    "source": "ref_occurences",
+                    "field-view": "code",
+                    "field-record": "id"
+                }
+            }
+        },
+        "form-buttons": {
+            "security-key": "btnPrioritiesM2",
+            "label": "Save Priority M2",
+            "form-submit": {
+                "type": "submit"
+            }
+        }
+    },
+    "incident_types": {
+        "tableMaster": {
+            "table": "ref_incident_types",
+            "label": "Incident Types"
+        },
+        "fields": {
+            "name": {
+                "security-key": "iEzovPbojyyF",
+                "label": "Name",
+                "form": {
+                    "type": "text",
+                    "source_type": "value"
+                }
+            },
+            "prefix": {
+                "security-key": "6Z_tbDdrWRo7",
+                "label": "Prefix",
+                "form": {
+                    "type": "text",
+                    "source_type": "value"
+                }
+            },
+            "color": {
+                "security-key": "BF5GYvSP78f7",
+                "label": "Color",
+                "form": {
+                    "type": "text",
+                    "source_type": "value"
+                }
+            },
+            "description": {
+                "security-key": "-MntkA3xtHAM",
+                "label": "Description",
+                "form": {
+                    "type": "text",
+                    "source_type": "value"
+                }
+            }
+        },
+        "form-buttons": {
+            "security-key": "btnIncidentTypes",
+            "label": "Save Incident Type",
+            "form-submit": {
+                "type": "submit"
+            }
+        }
+    },
+    "state_8d": {
+        "tableMaster": {
+            "table": "ref_state_8d",
+            "label": "State 8d"
+        },
+        "fields": {
+            "code_state": {
+                "security-key": "FBeXlbkB2fwn",
+                "label": "Code State",
+                "form": {
+                    "type": "text",
+                    "source_type": "value"
+                }
+            },
+            "title": {
+                "security-key": "UX_Zf6sVqooE",
+                "label": "Title",
+                "form": {
+                    "type": "text",
+                    "source_type": "value"
+                }
+            },
+            "description": {
+                "security-key": "25IkrnkL-44c",
+                "label": "Description",
+                "form": {
+                    "type": "textarea",
+                    "source_type": "value"
+                }
+            }
+        },
+        "form-buttons": {
+            "security-key": "btnState8d",
+            "label": "Save State 8D",
+            "form-submit": {
+                "type": "submit"
+            }
+        }
+    }
+}

@@ -1,0 +1,399 @@
+{
+    "product_families": {
+        "tableMaster": {
+            "table": "ref_product_families",
+            "label": "Ref Product Families"
+        },
+        "fields": {
+            "name": {
+                "security-key": "A1B2C3D4",
+                "label": "Name",
+                "form": {
+                    "type": "text",
+                    "source-type": "value"
+                }
+            }
+        },
+        "form-buttons": {
+            "security-key": "btnProdFam",
+            "label": "Save Product Family",
+            "form-submit": {
+                "type": "submit"
+            }
+        }
+    },
+    "models": {
+        "tableMaster": {
+            "table": "ref_models",
+            "label": "Ref Models"
+        },
+        "fields": {
+            "name": {
+                "security-key": "E5F6G7H8",
+                "label": "Model Name",
+                "form": {
+                    "type": "text",
+                    "source-type": "value"
+                }
+            },
+            "family": {
+                "security-key": "ModFamID",
+                "label": "Family",
+                "form": {
+                    "type": "select",
+                    "source-type": "sgbd",
+                    "source": "ref_product_families",
+                    "field-view": "name",
+                    "field-record": "id"
+                }
+            }
+        },
+        "form-buttons": {
+            "security-key": "btnModels",
+            "label": "Save Model",
+            "form-submit": {
+                "type": "submit"
+            }
+        }
+    },
+    "sites": {
+        "tableMaster": {
+            "table": "ref_sites",
+            "label": "Ref Sites"
+        },
+        "fields": {
+            "name": {
+                "security-key": "I9J0K1L2",
+                "label": "Site Name",
+                "form": {
+                    "type": "text",
+                    "source-type": "value"
+                }
+            },
+            "code": {
+                "security-key": "SiteCode01",
+                "label": "Site Code",
+                "form": {
+                    "type": "text",
+                    "source-type": "value"
+                }
+            },
+            "country": {
+                "security-key": "StCtry09",
+                "label": "Country",
+                "form": {
+                    "type": "text",
+                    "source-type": "value"
+                }
+            }
+        },
+        "form-buttons": {
+            "security-key": "btnSites",
+            "label": "Save Site",
+            "form-submit": {
+                "type": "submit"
+            }
+        }
+    },
+    "severities": {
+        "tableMaster": {
+            "table": "ref_severities",
+            "label": "Ref Severities"
+        },
+        "fields": {
+            "number": {
+                "security-key": "M3N4O5P6",
+                "label": "Severity Number",
+                "form": {
+                    "type": "number",
+                    "source-type": "value"
+                }
+            },
+            "label": {
+                "security-key": "SvLbl13",
+                "label": "Label",
+                "form": {
+                    "type": "text",
+                    "source-type": "value"
+                }
+            },
+            "security": {
+                "security-key": "SvSec20",
+                "label": "Security",
+                "form": {
+                    "type": "text",
+                    "source-type": "value"
+                }
+            }
+        },
+        "form-buttons": {
+            "security-key": "btnSeverities",
+            "label": "Save Severity",
+            "form-submit": {
+                "type": "submit"
+            }
+        }
+    },
+    "occurences": {
+        "tableMaster": {
+            "table": "ref_occurences",
+            "label": "Ref Occurences"
+        },
+        "fields": {
+            "code": {
+                "security-key": "Q7R8S9T0",
+                "label": "Occurence Code",
+                "form": {
+                    "type": "text",
+                    "source-type": "value"
+                }
+            },
+            "description": {
+                "security-key": "OcDesc14",
+                "label": "Description",
+                "form": {
+                    "type": "textarea",
+                    "source-type": "value"
+                }
+            }
+        },
+        "form-buttons": {
+            "security-key": "btnOccurences",
+            "label": "Save Occurence",
+            "form-submit": {
+                "type": "submit"
+            }
+        }
+    },
+    "business": {
+        "tableMaster": {
+            "table": "ref_business",
+            "label": "Ref Business"
+        },
+        "fields": {
+            "business": {
+                "security-key": "U1V2W3X4",
+                "label": "Business",
+                "form": {
+                    "type": "text",
+                    "source-type": "value"
+                }
+            }
+        },
+        "form-buttons": {
+            "security-key": "btnBusiness",
+            "label": "Save Business",
+            "form-submit": {
+                "type": "submit"
+            }
+        }
+    },
+    "after_sales": {
+        "tableMaster": {
+            "table": "ref_after_sales",
+            "label": "Ref After Sales"
+        },
+        "fields": {
+            "satc": {
+                "security-key": "Y5Z6A7B8",
+                "label": "After Sales Code",
+                "form": {
+                    "type": "text",
+                    "source-type": "value"
+                }
+            }
+        },
+        "form-buttons": {
+            "security-key": "btnAfterSales",
+            "label": "Save After Sales",
+            "form-submit": {
+                "type": "submit"
+            }
+        }
+    },
+    "contexts": {
+        "tableMaster": {
+            "table": "ref_contexts",
+            "label": "Ref Contexts"
+        },
+        "fields": {
+            "context": {
+                "security-key": "CTX01",
+                "label": "Context",
+                "form": {
+                    "type": "text",
+                    "source-type": "value"
+                }
+            }
+        },
+        "form-buttons": {
+            "security-key": "btnContexts",
+            "label": "Save Context",
+            "form-submit": {
+                "type": "submit"
+            }
+        }
+    },
+    "priorities_m1": {
+        "tableMaster": {
+            "table": "ref_priorities_m1",
+            "label": "Ref Priorities M1"
+        },
+        "fields": {
+            "priority_m1": {
+                "security-key": "PRM1",
+                "label": "Priority M1",
+                "form": {
+                    "type": "text",
+                    "source-type": "value"
+                }
+            },
+            "severite": {
+                "security-key": "Pr1SevID",
+                "label": "Severite",
+                "form": {
+                    "type": "select",
+                    "source-type": "sgbd",
+                    "source": "ref_severities",
+                    "field-view": "label",
+                    "field-record": "id"
+                }
+            }
+        },
+        "form-buttons": {
+            "security-key": "btnPrioritiesM1",
+            "label": "Save Priority M1",
+            "form-submit": {
+                "type": "submit"
+            }
+        }
+    },
+    "priorities_m2": {
+        "tableMaster": {
+            "table": "ref_priorities_m2",
+            "label": "Ref Priorities M2"
+        },
+        "fields": {
+            "priority_m2": {
+                "security-key": "PRM2",
+                "label": "Priority M2",
+                "form": {
+                    "type": "text",
+                    "source-type": "value"
+                }
+            },
+            "severite": {
+                "security-key": "Pr2SevID",
+                "label": "Severite",
+                "form": {
+                    "type": "select",
+                    "source-type": "sgbd",
+                    "source": "ref_severities",
+                    "field-view": "label",
+                    "field-record": "id"
+                }
+            }
+        },
+        "form-buttons": {
+            "security-key": "btnPrioritiesM2",
+            "label": "Save Priority M2",
+            "form-submit": {
+                "type": "submit"
+            }
+        }
+    },
+    "incident_types": {
+        "tableMaster": {
+            "table": "ref_incident_types",
+            "label": "Ref Incident Types"
+        },
+        "fields": {
+            "name": {
+                "security-key": "INC01",
+                "label": "Name",
+                "form": {
+                    "type": "text",
+                    "source-type": "value"
+                }
+            },
+            "prefix": {
+                "security-key": "INC02",
+                "label": "Prefix",
+                "form": {
+                    "type": "text",
+                    "source-type": "value"
+                }
+            },
+            "color": {
+                "security-key": "INC04",
+                "label": "Color",
+                "form": {
+                    "type": "text",
+                    "source-type": "value"
+                }
+            },
+            "short_label": {
+                "security-key": "INC05",
+                "label": "Short Label",
+                "form": {
+                    "type": "text",
+                    "source-type": "value"
+                }
+            },
+            "order_index": {
+                "security-key": "INC06",
+                "label": "Order Index",
+                "form": {
+                    "type": "number",
+                    "source-type": "value"
+                }
+            }
+        },
+        "form-buttons": {
+            "security-key": "btnIncidentTypes",
+            "label": "Save Incident Type",
+            "form-submit": {
+                "type": "submit"
+            }
+        }
+    },
+    "state_8d": {
+        "tableMaster": {
+            "table": "ref_state_8d",
+            "label": "Ref State 8d"
+        },
+        "fields": {
+            "code_state": {
+                "security-key": "S8D1",
+                "label": "Code State",
+                "form": {
+                    "type": "text",
+                    "source-type": "value"
+                }
+            },
+            "title": {
+                "security-key": "S8D2",
+                "label": "Title",
+                "form": {
+                    "type": "text",
+                    "source-type": "value"
+                }
+            },
+            "description": {
+                "security-key": "S8D3",
+                "label": "Description",
+                "form": {
+                    "type": "textarea",
+                    "source-type": "value"
+                }
+            }
+        },
+        "form-buttons": {
+            "security-key": "btnState8d",
+            "label": "Save State 8D",
+            "form-submit": {
+                "type": "submit"
+            }
+        }
+    }
+}

@@ -1,0 +1,128 @@
+{
+    "Qualify": {
+        "IncidentsAndQualifications": {
+            "type": {
+                "security-key": "jN4k7mPq2xR5",
+                "label": "Type",
+                "form": {
+                    "type": "hidden",
+                    "where": "IncidentsAndQualifications.type == 4"
+                }
+            },
+            "status": {
+                "security-key": "xK9m2pQn4vL8",
+                "label": "Status",
+                "form": {
+                    "type": "hidden",
+                    "where": "IncidentsAndQualifications.status == 'Qualify'"
+                }
+            },
+            "prd_or_cmp": {
+                "security-key": "jN4k7mPq2xR5",
+                "label": "Article type",
+                "form": {
+                    "type": "select",
+                    "source": "enum",
+                    "options": [ "Product", "Component" ],
+                    "placeholder": true
+                },
+                "int": false
+            },
+            "product_family": {
+                "security-key": "xK9m2pQn4vL8",
+                "label": "Product family",
+                "form": {
+                    "type": "select",
+                    "source": "sgbd",
+                    "options": "ref_product_families"
+                },
+                "int": true
+            },
+            "model": {
+                "security-key": "bR5h8jNw3tY6",
+                "label": "Model",
+                "form": {
+                    "type": "select",
+                    "source": "sgbd",
+                    "options": "ref_models"
+                },
+                "int": true
+            },
+            "serial_number": {
+                "security-key": "mD2k7vXp9sA4",
+                "label": "Serial number",
+                "form": {
+                    "type": "text"
+                },
+                "int": false
+            },
+            "site": {
+                "security-key": "cF6j4wLq8nB1",
+                "label": "Site",
+                "form": {
+                    "type": "select",
+                    "source": "sgbd",
+                    "options": "ref_sites"
+                },
+                "int": true
+            },
+            "marche_pays": {
+                "security-key": "gH3t7yPm5vC9",
+                "label": "Exchange country",
+                "form": {
+                    "type": "text"
+                },
+                "int": false
+            },
+            "ref_designation": {
+                "security-key": "pL8n4wXk2mR5",
+                "label": "Product reference",
+                "form": {
+                    "type": "text"
+                },
+                "int": false
+            },
+            "probleme_description": {
+                "security-key": "tB6v9sJ4hD7",
+                "label": "Problem description",
+                "form": {
+                    "type": "textarea"
+                },
+                "int": false
+            },
+            "qte_fab": {
+                "security-key": "kM5x8wNq3vF1",
+                "label": "Quantity manufactured",
+                "form": {
+                    "type": "text"
+                },
+                "int": false
+            },
+            "photos": {
+                "security-key": "rY7h2tLp9nC4",
+                "label": "Photos",
+                "form": {
+                    "type": "file",
+                    "directory": "photos/"
+                },
+                "int": false
+            },
+            "sf_link": {
+                "security-key": "zQ4j7nPt2xL5",
+                "label": "Salesforce link",
+                "form": {
+                    "type": "url"
+                },
+                "int": false
+            },
+            "detection_date": {
+                "security-key": "wS3f8mBk6vX9",
+                "label": "Detection date",
+                "form": {
+                    "type": "date"
+                },
+                "int": false
+            }
+        }
+    }
+}

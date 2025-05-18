@@ -1,0 +1,276 @@
+{
+    "Qualify": {
+        "tableMaster": {
+            "table": "incidents_and_qualifications",
+            "label": "Incidents and Qualifications",
+            "where": {
+                "type": 1,
+                "status": "Qualify"
+            },
+            "color": "#356335",
+            "update": {
+                "status": "Qualify"
+            }
+        },
+        "fields": {
+            "code": {
+                "label": "Incident Code",
+                "form": {
+                    "type": "text",
+                    "source_type": "session_var",
+                    "source": "data.code",
+                    "readonly": true
+                },
+                "security_key": "RegplITaXL4K"
+            },
+            "prd_or_cmp": {
+                "label": "Produit u composant",
+                "form": {
+                    "type": "select",
+                    "source": [
+                        "Product",
+                        "Component"
+                    ],
+                    "source_type": "enum"
+                },
+                "security_key": "SQ-FLUTkWN8c"
+            },
+            "product_family": {
+                "label": "Product family",
+                "form": {
+                    "type": "select",
+                    "source_type": "sgbd",
+                    "source": "ref_product_families",
+                    "field-view": "name",
+                    "field-record": "id",
+                    "view_id": true
+                },
+                "security_key": "uMnyYFji1WUu"
+            },
+            "model": {
+                "label": "Model",
+                "form": {
+                    "type": "select",
+                    "source_type": "sgbd",
+                    "source": "ref_models",
+                    "field-view": "name",
+                    "field-record": "id",
+                    "where": {}
+                },
+                "security_key": "uzAJ8TPgndny"
+            },
+            "serial_number": {
+                "label": "Serial number",
+                "form": {
+                    "type": "text"
+                },
+                "security_key": "OhVv6DU5Ibmo"
+            },
+            "site": {
+                "label": "Site",
+                "form": {
+                    "type": "select",
+                    "source_type": "sgbd",
+                    "source": "ref_sites",
+                    "field-view": "name",
+                    "field-record": "id"
+                },
+                "security_key": "U1Zl7ryXsaJV"
+            },
+            "marches_pays": {
+                "label": "Exchange country",
+                "form": {
+                    "type": "text"
+                },
+                "security_key": "kdDjjsnLkm0F"
+            },
+            "ref_designation": {
+                "label": "Product reference",
+                "form": {
+                    "type": "text"
+                },
+                "security_key": "k7hQf6CX4XwM"
+            },
+            "probleme_description": {
+                "label": "Problem description",
+                "form": {
+                    "type": "textarea"
+                },
+                "security_key": "0yCzXR9gb9ly"
+            },
+            "qte_fab": {
+     
+                "label": "Quantity manufactured",
+                "form": {
+                    "type": "text"
+                },
+                "security_key": "XOFkJ7pzOHKy"
+            },
+            "photos": {
+    
+                "label": "Photos",
+                "form": {
+                    "type": "file",
+                    "destination_folder": "photos/"
+                },
+                "security_key": "ytYwoNYuGj5E"
+            },
+            "complementary_information": {
+          
+                "label": "Complementary information",
+                "form": {
+                    "type": "textarea"
+                },
+                "security_key": "ROuNzRwCcrK_"
+            },
+            "sf_link": {
+           
+                "label": "Salesforce link",
+                "form": {
+                    "type": "text"
+                },
+                "security_key": "3_fRjCj07CZN"
+            },
+            "detection_date": {
+        
+                "label": "Detection date",
+                "form": {
+                    "type": "date",
+                    "readonly": false,
+                    "source_type": "now"
+                },
+                "security_key": "UQcjBXDsx1X2"
+            }
+        },
+        "next-step": {
+            "step": {
+                "value": 3,
+                "session-var": "data.step"
+            },
+            "entity_id": {
+                "source": "id",
+                "session-var": "data.incident_id"
+            },
+            "incident_type": {
+                "value": "cus",
+                "session-var": "data.incident_type"
+            },
+            "incident_type_id": {
+                "value": 1,
+                "session-var": "data.incident_type_id"
+            },
+            "color": {
+                "value": "#356335",
+                "session-var": "data.color"
+            },
+            "next-status": "Priorization",
+            "next-page": "priority",
+            "final-step": false
+        },
+        "form-buttons": {
+            "security_key": "poing832nd",
+            "label": "Create qualifying incident",
+            "form-submit": {
+                "type": "submit"
+            }
+        }
+    },
+    "Priorization": {
+        "tableMaster": {
+            "table": "incidents_and_qualifications",
+            "label": "Incidents and Qualifications",
+            "where": {
+                "type": 1,
+                "status": "Priorization"
+            },
+            "color": "#356335",
+            "update": {
+                "status": "Priorization"
+            }
+        },
+        "fields": {
+            "severity": {
+                "label": "Severity",
+                "form": {
+                    "type": "select",
+                    "source_type": "sgbd",
+                    "source": "ref_severities",
+                    "field-view": "number",
+                    "field-record": "id",
+                    "view_id": true
+                },
+                "security_key": "fxdhe8af5O6W"
+            },
+            "occurence": {
+                "label": "Occurrence",
+                "form": {
+                    "type": "select",
+                    "source_type": "sgbd",
+                    "source": "ref_occurences",
+                    "field-view": "code",
+                    "field-record": "id",
+                    "view_id": true
+                },
+                "security_key": "KryfhKgjeIXW"
+            },
+            "business": {
+                "security-key": "pGEoAXjicNns",
+                "label": "Business impact",
+                "form": {
+                    "type": "select",
+                    "source_type": "sgbd",
+                    "source": "ref_business",
+                    "field-view": "business",
+                    "field-record": "id",
+                    "view_id": true
+                },
+                "security_key": "pGEoAXjicNns"
+            },
+            "after_sales": {
+                "security-key": "rsUMmW9O37yu",
+                "label": "Post-sales impact",
+                "form": {
+                    "type": "select",
+                    "source_type": "sgbd",
+                    "source": "ref_after_sales",
+                    "field-view": "satc",
+                    "field-record": "id",
+                    "view_id": true
+                },
+                "security_key": "rsUMmW9O37yu"
+            }
+        },
+        "next-step": {
+            "step": {
+                "value": 3,
+                "session-var": "data.step"
+            },
+            "entity_id": {
+                "source": "id",
+                "session-var": "data.incident_id"
+            },
+            "incident_type": {
+                "value": "cus",
+                "session-var": "data.incident_type"
+            },
+            "incident_type_id": {
+                "value": 1,
+                "session-var": "data.incident_type_id"
+            },
+            "color": {
+                "value": "#356335",
+                "session-var": "data.color"
+            },
+            "next-status": "Resolution",
+            "next-page": "ndf",
+            "final-step": false
+        },
+        "form-buttons": {
+            "security-key": "poing832nd",
+            "label": "Priorise incident",
+            "form-submit": {
+                "type": "submit"
+            }
+        }
+    }
+}

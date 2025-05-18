@@ -1,0 +1,199 @@
+{
+    "Qualify": {
+        "tableMaster": {
+            "table": "incidents_and_qualifications",
+            "where": {
+                "status": "Qualify",
+                "type": 3
+            },
+            "color": "#356335",
+            "update": {
+                "status": "Qualify"
+            }
+        },
+        "fields": {
+            "code": {
+                "label": "Incident Code",
+                "form": {
+                    "type": "text",
+                    "readonly": true,
+                    "source_type": "session_var",
+                    "source": "data.code"
+                },
+                "security-key": "RegplITaXL4K"
+            },
+            "prd_or_cmp": {
+                "security-key": "SQ-FLUTkWN8c",
+                "label": "Produit u composant",
+                "form": {
+                    "type": "select",
+                    "source": [
+                        "Product",
+                        "Component"
+                    ],
+                    "source_type": "enum"
+                }
+            }
+        },
+        "tableSecondaire": {
+            "table": "non_conformities",
+            "label": "Non Conformities",
+            "relation": "incident_id",
+            "expander": true,
+            "count_records": true,
+            "fields": {
+                "incident_id": {
+                    "label": "Id incident",
+                    "form": {
+                        "type": "text",
+                        "readonly": true,
+                        "source_type": "session_var",
+                        "source": "data.incident_id"
+                    },
+                    "security-key": "J-xe4svrimhe"
+                },
+                "wholesaler_name": {
+                    "label": "Wholesaler Name",
+                    "form": {
+                        "type": "text"
+                    },
+                    "security-key": "t5L8DMCS8kN7"
+                },
+                "sap_sk": {
+                    "label": "SAP Code",
+                    "form": {
+                        "type": "text"
+                    },
+                    "security-key": "umLdOPxrlG_T"
+                },
+                "non_conformity": {
+                    "label": "Non-Conformity",
+                    "form": {
+                        "type": "text"
+                    },
+                    "security-key": "UQg0SAlDGkFi"
+                },
+                "iso_code": {
+                    "label": "ISO Code",
+                    "form": {
+                        "type": "text"
+                    },
+                    "security-key": "jqyMh7E3zR1S"
+                }
+            }
+        },
+        "next_step": {
+            "step": {
+                "value": 3,
+                "session-var": "data.step"
+            },
+            "entity_id": {
+                "source": "id",
+                "session-var": "data.incident_id"
+            },
+            "incident_type": {
+                "value": "saf",
+                "session-var": "data.incident_type"
+            },
+            "incident_type_id": {
+                "value": 3,
+                "session-var": "data.incident_type_id"
+            },
+            "color": {
+                "value": "#356335",
+                "session-var": "data.color"
+            },
+            "next-page": "track",
+            "step_final": false
+        },
+        "form-buttons": {
+            "security-key": "poing832nd",
+            "label": "Qualify",
+            "form-submit": {
+                "type": "submit"
+            }
+        }
+    },
+    "Priorization": {
+        "tableMaster": {
+            "table": "incidents_and_qualifications",
+            "where": {
+                "status": "Priorization",
+                "type": 3
+            },
+            "color": "#356335",
+            "update": {
+                "status": "Priorization"
+            }
+        },
+        "fields": {
+            "after_sales": {
+                "security-key": "icS2PdObxllj",
+                "label": "Post-sales impact",
+                "form": {
+                    "type": "select",
+                    "source_type": "sgbd",
+                    "source": "ref_after_sales",
+                    "field-view": "satc",
+                    "field-record": "id",
+                    "view_id": true
+                }
+            },
+            "priority_m1": {
+                "security-key": "HrL-pkAfIy0n",
+                "label": "M1 priority",
+                "form": {
+                    "type": "select",
+                    "source_type": "sgbd",
+                    "source": "ref_priorities_m1",
+                    "field-view": "priority_m1",
+                    "field-record": "id",
+                    "view_id": true
+                }
+            },
+            "occurence": {
+                "security-key": "TdHiLFDBkbOS",
+                "label": "Occurrence",
+                "form": {
+                    "type": "select",
+                    "source_type": "sgbd",
+                    "source": "ref_occurences",
+                    "field-view": "code",
+                    "field-record": "id",
+                    "view_id": true
+                }
+            }
+        },
+        "form-buttons": {
+            "security-key": "poing832nd",
+            "label": "Envoyer",
+            "form-submit": {
+                "type": "ptiorize"
+            }
+        },
+        "next_step": {
+            "step": {
+                "value": 4,
+                "session-var": "data.step"
+            },
+            "entity_id": {
+                "source": "id",
+                "session-var": "data.incident_id"
+            },
+            "incident_type": {
+                "value": "saf",
+                "session-var": "data.incident_type"
+            },
+            "incident_type_id": {
+                "value": 3,
+                "session-var": "data.incident_type_id"
+            },
+            "color": {
+                "value": "#356335",
+                "session-var": "data.color"
+            },
+            "next-page": "track",
+            "step_final": false
+        }
+    }
+}
